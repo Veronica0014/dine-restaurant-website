@@ -1,0 +1,804 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.padding {
+  padding: 2.5rem;
+}
+
+.header {
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 76.8rem;
+  width: 100vw;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+.header__background {
+  background-image: url("/src/homepage/hero-bg-mobile@2x.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.header__image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/src/homepage/hero-bg-tablet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 45rem;
+}
+.header__image img {
+  width: 100%;
+}
+.header__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 24%;
+  left: 0;
+}
+.header__title {
+  font-weight: 300;
+  line-height: 4rem;
+  font-size: 3.2rem;
+  letter-spacing: -0.04rem;
+  margin: 3.8rem 0;
+}
+.header__description {
+  line-height: 2.6rem;
+  margin-bottom: 4.2rem;
+}
+.header__button {
+  padding: 2.5rem 5.5rem;
+  background-color: transparent;
+  border: solid 1px rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  line-height: 1.6rem;
+  letter-spacing: 0.25rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.header__logo {
+  width: 11.24rem;
+  margin: 0.2rem auto;
+}
+
+.light-container {
+  position: relative;
+  top: -10.5rem;
+  margin-bottom: -12rem;
+}
+.light-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0rem;
+}
+.light-container .card__image {
+  margin-bottom: 4rem;
+  box-shadow: 0px 20px 30px -6px rgba(0, 0, 0, 0.3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 40rem;
+}
+.light-container .card__image--first {
+  background-image: url("/src/homepage/enjoyable-place-mobile@2x.jpg");
+}
+.light-container .card__image--second {
+  background-image: url("/src/homepage/locally-sourced-mobile.jpg");
+}
+.light-container .card__element {
+  margin-bottom: 3rem;
+}
+.light-container .card__title {
+  color: rgb(36, 43, 55);
+  text-align: center;
+  line-height: 4rem;
+  font-size: 3.2rem;
+  letter-spacing: -0.04rem;
+  margin-bottom: 1.5rem;
+}
+.light-container .card__description {
+  line-height: 2.6rem;
+  text-align: center;
+  margin-bottom: 9rem;
+}
+
+.dark-container {
+  background-color: rgb(17, 17, 17);
+  color: rgb(255, 255, 255);
+}
+.dark-container .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dark-container .cards__element {
+  margin: 2rem 0 3.5rem 0;
+}
+.dark-container .cards__title {
+  font-weight: 700;
+  font-size: 3.2rem;
+  text-align: center;
+}
+.dark-container .cards__description {
+  line-height: 2.6rem;
+  text-align: center;
+  margin-bottom: 8.5rem;
+}
+.dark-container .card__title {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: -0.025rem;
+  font-weight: 700;
+  margin: 3rem 0 1rem 0;
+}
+.dark-container .card__description {
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+.dark-container .card__line {
+  height: 2px;
+  width: 32.7rem;
+  color: gray;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 2.5rem;
+  opacity: 0.1494;
+}
+.dark-container .card .line-mobile {
+  display: none;
+}
+.dark-container .card__image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 28.3536rem;
+}
+.dark-container .card__image--first {
+  background-image: url("/src/homepage/salmon-mobile.jpg");
+}
+.dark-container .card__image--second {
+  background-image: url("/src/homepage/beef-mobile.jpg");
+}
+.dark-container .card__image--third {
+  background-image: url("/src/homepage/chocolate-mobile.jpg");
+}
+
+.options-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.options-container .card__option {
+  font-size: 1.7rem;
+  color: rgb(76, 76, 76);
+  font-weight: 600;
+  text-align: center;
+  line-height: 2.8rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+.options-container .card__option--first {
+  color: #4c4c4c;
+  margin-top: 3.5rem;
+}
+.options-container .card__option--therest {
+  opacity: 0.5;
+}
+.options-container .card__image {
+  box-shadow: 0px 20px 30px -6px rgba(0, 0, 0, 0.3);
+  width: 32.6rem;
+  height: 40rem;
+  background: url(/src/homepage/family-gathering-mobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 4rem;
+}
+.options-container .card__title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.04rem;
+}
+.options-container .card__description {
+  line-height: 2.6rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+.options-container .card__description, .options-container .card__title {
+  color: rgb(36, 43, 55);
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.options-container .card__button {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  line-height: 1.6rem;
+  letter-spacing: 0.25rem;
+  background-color: rgb(17, 17, 17);
+  width: 23.5rem;
+  height: 6.4rem;
+  margin: 2.7rem 0 8.5rem 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.options-container .card__options-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/booking/hero-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0rem top 10px;
+  width: 100vw;
+  height: 32.8rem;
+}
+.book__title {
+  font-size: 3.2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.04rem;
+  text-align: center;
+}
+.book__button {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  letter-spacing: 0.25rem;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  padding: 2.5rem 5.5rem;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 2.8rem;
+  font-size: 1.4rem;
+  padding: 0 4rem;
+}
+.footer__image {
+  width: 10.3425rem;
+  height: 4rem;
+  margin: 8rem 0 3rem 0;
+}
+.footer__text, .footer__hours {
+  opacity: 0.554;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.footer__hours {
+  margin-bottom: 9rem;
+}
+
+@media (min-width: 768px) {
+  .padding {
+    padding-right: 9.7rem;
+    padding-left: 9.7rem;
+  }
+  .header {
+    height: 104rem;
+  }
+  .header__logo {
+    width: 10.3rem;
+    margin: 1rem auto;
+  }
+  .header__title {
+    font-size: 4.8rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
+    letter-spacing: -0.06rem;
+    line-height: 6.4rem;
+  }
+  .header__description {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .header__background {
+    background-image: url("/src/homepage/hero-bg-tablet@2x.jpg");
+  }
+  .header__image {
+    background-image: url("/src/homepage/hero-bg-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 45rem;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+  }
+  .header__image img {
+    width: 100%;
+  }
+  .header__text-container {
+    top: 35%;
+  }
+  .header__description {
+    margin-right: 3.5rem;
+    margin-left: 3.5rem;
+  }
+  .header__button {
+    margin-top: 1rem;
+  }
+  .light-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .light-container .rectangle {
+    position: absolute;
+    top: 23rem;
+    left: -25rem;
+    background: url("/src/icons/Rectangle (1).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    height: 32rem;
+    width: 89.5rem;
+  }
+  .light-container .brown-element {
+    position: absolute;
+    background: url("/src/icons/Group 12.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    width: 16rem;
+    height: 7.6rem;
+    right: 6rem;
+    bottom: 45rem;
+  }
+  .light-container .bottom-rectangle {
+    position: absolute;
+    background: url("/src/icons/Rectangle (2).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    width: 89.5rem;
+    height: 32rem;
+    right: -27rem;
+    bottom: -14rem;
+  }
+  .light-container .card__image--first {
+    background-image: url("/src/homepage/enjoyable-place-tablet.jpg");
+  }
+  .light-container .card__image--second {
+    background-image: url("/src/homepage/locally-sourced-tablet.jpg");
+    margin-top: 1rem;
+  }
+  .light-container .card__title {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    font-weight: 700;
+    font-size: 4.8rem;
+    letter-spacing: -0.05rem;
+  }
+  .light-container .card__description {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+  }
+  .dark-container {
+    padding-bottom: 5rem;
+  }
+  .dark-container .cards__title {
+    font-size: 4.8rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .dark-container .cards__description {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 3.5rem;
+  }
+  .dark-container .cards__element {
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+  }
+  .dark-container .card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dark-container .card__image {
+    width: 12.8rem;
+    height: 9.6rem;
+    margin-right: 8rem;
+  }
+  .dark-container .card__image-line {
+    background-image: url("/src/icons/Rectangle (3).png");
+    position: absolute;
+    width: 57.3rem;
+    height: 0.1rem;
+    top: 12.8rem;
+    left: 0;
+    opacity: 0.1494;
+  }
+  .dark-container .card__line {
+    position: absolute;
+    left: 10rem;
+    top: 2rem;
+    width: 3.2rem;
+    z-index: 0;
+  }
+  .dark-container .card .line-mobile {
+    display: block;
+  }
+  .dark-container .card__text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 10rem;
+    padding-top: 1.2rem;
+  }
+  .dark-container .card__title {
+    margin-top: 0;
+  }
+  .dark-container .card__description {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .options-container {
+    position: relative;
+  }
+  .options-container .brown-second-element {
+    position: absolute;
+    background: url("/src/icons/Group 12.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    width: 16rem;
+    height: 7.6rem;
+    left: 4rem;
+    top: 9rem;
+  }
+  .options-container .card__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+  .options-container .card__option--first {
+    position: relative;
+    margin-top: 0;
+  }
+  .options-container .card__option--first::after {
+    content: "";
+    position: absolute;
+    top: 3.5rem;
+    left: 6.5rem;
+    height: 1px;
+    width: 4.8rem;
+    background-color: rgb(158, 127, 102);
+    color: rgb(158, 127, 102);
+  }
+  .options-container .card__image {
+    width: 57.3rem;
+    height: 36rem;
+    background: url("/src/homepage/family-gathering-tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 9rem;
+  }
+  .options-container .card__title {
+    font-size: 4.8rem;
+  }
+  .options-container .card__description {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 2.5rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  .options-container .card__options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .book {
+    background: url("/src/booking/hero-bg-tablet.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .book__title {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 6rem;
+    padding-bottom: 0;
+  }
+  .footer__image {
+    margin: 0;
+    margin-right: 12rem;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .footer__text-container, .footer__text, .footer__hours {
+    text-align: left;
+  }
+}
+@media (min-width: 1400px) {
+  .padding {
+    padding: 2.5rem 16.5rem;
+  }
+  .header {
+    height: 104rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+  }
+  .header__text-container {
+    top: 15%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .header__logo {
+    margin: 0;
+    margin-bottom: 10rem;
+    width: 10.3rem;
+    height: 4rem;
+  }
+  .header__logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .header__title {
+    font-size: 8rem;
+    letter-spacing: -0.1rem;
+    line-height: 8rem;
+    text-align: left;
+    margin: 0;
+  }
+  .header__description {
+    text-align: left;
+    width: 50.7rem;
+    margin: 2rem 0;
+  }
+  .header__button {
+    margin: 2rem 0 0 0;
+  }
+  .header__image {
+    background-image: url("/src/homepage/hero-bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .light-container .rectangle {
+    background: url("/src/icons/Rectangle desktop.png");
+    height: 32rem;
+    width: 89.5rem;
+    left: 0rem;
+    top: 32rem;
+  }
+  .light-container .bottom-rectangle {
+    position: absolute;
+    background: url("/src/icons/Rectangle2desktop.png");
+    bottom: 15rem;
+    right: 0;
+  }
+  .light-container .card {
+    flex-direction: row;
+    position: relative;
+  }
+  .light-container .card--reverse {
+    flex-direction: row-reverse;
+  }
+  .light-container .card__image {
+    min-width: 54rem;
+    height: 72rem;
+    flex-grow: 1;
+  }
+  .light-container .card__image--first {
+    background-image: url("/src/homepage/enjoyable-place-desktop.jpg");
+    margin-right: 9rem;
+  }
+  .light-container .card__image--second {
+    background-image: url("/src/homepage/locally-sourced-desktop.jpg");
+    margin-top: 8rem;
+    z-index: 1;
+    margin-left: 9rem;
+  }
+  .light-container .card__text-container {
+    flex-grow: 1;
+  }
+  .light-container .card__title, .light-container .card__description {
+    text-align: left;
+    margin: 0;
+  }
+  .light-container .card__element {
+    position: absolute;
+    bottom: -6rem;
+  }
+  .dark-container {
+    padding-top: 30rem;
+    position: relative;
+    margin-top: -26rem;
+  }
+  .dark-container .cards {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .dark-container .cards__container {
+    flex-grow: 1;
+  }
+  .dark-container .cards__text-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 6rem;
+  }
+  .dark-container .cards__title, .dark-container .cards__description {
+    text-align: left;
+  }
+  .dark-container .cards__element {
+    position: absolute;
+    top: 14rem;
+    left: 21.3rem;
+  }
+  .dark-container .card__line {
+    left: 12.2rem;
+  }
+  .dark-container .card__image {
+    width: 22.8rem;
+    height: 9.6rem;
+  }
+  .dark-container .card__image img {
+    width: 100%;
+  }
+  .dark-container .card__title, .dark-container .card__description {
+    text-align: left;
+  }
+  .options-container {
+    display: flex;
+    flex-direction: row;
+    margin: 8rem 0;
+  }
+  .options-container .brown-second-element {
+    top: -1rem;
+    left: 13.1rem;
+  }
+  .options-container .card {
+    flex-direction: row;
+  }
+  .options-container .card__image {
+    background: url("/src/homepage/family-gathering-desktop.jpg");
+    background-size: cover;
+    width: 90rem;
+    margin-right: 12.5rem;
+    height: 54rem;
+    margin-top: 0;
+  }
+  .options-container .card__right-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .options-container .card__button {
+    margin: 3rem 0 5 0;
+  }
+  .options-container .card__options {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .options-container .card__options-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .options-container .card__description, .options-container .card__title {
+    text-align: left;
+  }
+  .options-container .card__option--first::after {
+    top: 1.5rem;
+    left: -12.5rem;
+    height: 1px;
+    width: 9.5rem;
+  }
+  .book {
+    flex-direction: row;
+    justify-content: space-around;
+    background: url("/src/booking/hero-bg-desktop.jpg");
+  }
+  .book__button {
+    margin-top: 0;
+  }
+  .footer {
+    justify-content: space-around;
+    height: 30rem;
+    align-items: center;
+  }
+  .footer__text-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .footer__text, .footer__hours, .footer__image {
+    margin: 0;
+  }
+  .footer__image {
+    flex-grow: 1;
+    margin-top: -5.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
