@@ -88,6 +88,11 @@ body {
   font-size: 1.7rem;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+}
+.header__button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
 }
 .header__logo {
   width: 11.24rem;
@@ -95,7 +100,6 @@ body {
 }
 
 .light-container {
-  position: relative;
   top: -10.5rem;
   margin-bottom: -12rem;
 }
@@ -135,12 +139,13 @@ body {
 .light-container .card__description {
   line-height: 2.6rem;
   text-align: center;
-  margin-bottom: 9rem;
+  margin-bottom: 6rem;
 }
 
 .dark-container {
   background-color: rgb(17, 17, 17);
   color: rgb(255, 255, 255);
+  margin-top: 8rem;
 }
 .dark-container .cards {
   display: flex;
@@ -215,13 +220,22 @@ body {
   letter-spacing: 0.25rem;
   margin-bottom: 1.6rem;
   text-transform: uppercase;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
 }
 .options-container .card__option--first {
   color: #4c4c4c;
-  margin-top: 3.5rem;
+  margin-top: 4.5rem;
 }
-.options-container .card__option--therest {
+.options-container .card__option--second, .options-container .card__option--third {
   opacity: 0.5;
+  transition: color 0.1s;
+}
+.options-container .card__option:hover {
+  color: rgb(17, 17, 17);
+  opacity: 1;
 }
 .options-container .card__image {
   box-shadow: 0px 20px 30px -6px rgba(0, 0, 0, 0.3);
@@ -260,6 +274,11 @@ body {
   margin: 2.7rem 0 8.5rem 0;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+}
+.options-container .card__button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
 }
 .options-container .card__options-container {
   display: flex;
@@ -300,6 +319,11 @@ body {
   margin-top: 2.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+}
+.book__button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
 }
 
 .footer {
@@ -327,6 +351,10 @@ body {
 }
 .footer__hours {
   margin-bottom: 9rem;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -369,7 +397,7 @@ body {
     width: 100%;
   }
   .header__text-container {
-    top: 35%;
+    top: 40%;
   }
   .header__description {
     margin-right: 3.5rem;
@@ -382,41 +410,8 @@ body {
     position: relative;
     overflow: hidden;
   }
-  .light-container .rectangle {
-    position: absolute;
-    top: 23rem;
-    left: -25rem;
-    background: url("/src/icons/Rectangle (1).png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-    height: 32rem;
-    width: 89.5rem;
-  }
-  .light-container .brown-element {
-    position: absolute;
-    background: url("/src/icons/Group 12.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-    width: 16rem;
-    height: 7.6rem;
-    right: 6rem;
-    bottom: 45rem;
-  }
-  .light-container .bottom-rectangle {
-    position: absolute;
-    background: url("/src/icons/Rectangle (2).png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-    width: 89.5rem;
-    height: 32rem;
-    right: -27rem;
-    bottom: -14rem;
+  .light-container .card {
+    position: relative;
   }
   .light-container .card__image--first {
     background-image: url("/src/homepage/enjoyable-place-tablet.jpg");
@@ -437,6 +432,42 @@ body {
     line-height: 3rem;
     margin-left: 5.5rem;
     margin-right: 5.5rem;
+  }
+  .light-container .brown-element {
+    position: absolute;
+    background: url("/src/icons/Group 12.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    width: 16rem;
+    height: 7.6rem;
+    right: -5rem;
+    bottom: 42rem;
+  }
+  .light-container .rectangle {
+    position: absolute;
+    top: 23rem;
+    left: -25rem;
+    background: url("/src/icons/Rectangle (1).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    height: 32rem;
+    width: 89.5rem;
+  }
+  .light-container .bottom-rectangle {
+    position: absolute;
+    background: url("/src/icons/Rectangle (2).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    width: 89.5rem;
+    height: 32rem;
+    right: -27rem;
+    bottom: -14rem;
   }
   .dark-container {
     padding-bottom: 5rem;
@@ -503,9 +534,6 @@ body {
     text-align: left;
     margin-bottom: 0;
   }
-  .options-container {
-    position: relative;
-  }
   .options-container .brown-second-element {
     position: absolute;
     background: url("/src/icons/Group 12.png");
@@ -515,15 +543,14 @@ body {
     z-index: 1;
     width: 16rem;
     height: 7.6rem;
-    left: 4rem;
-    top: 9rem;
+    left: -5rem;
+    top: -3rem;
   }
   .options-container .card__options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70rem;
     margin-top: 6rem;
     margin-bottom: 3rem;
   }
@@ -535,13 +562,14 @@ body {
     content: "";
     position: absolute;
     top: 3.5rem;
-    left: 6.5rem;
+    left: 9.5rem;
     height: 1px;
     width: 4.8rem;
     background-color: rgb(158, 127, 102);
     color: rgb(158, 127, 102);
   }
   .options-container .card__image {
+    position: relative;
     width: 57.3rem;
     height: 36rem;
     background: url("/src/homepage/family-gathering-tablet.jpg");
@@ -592,6 +620,9 @@ body {
   }
   .footer__text-container, .footer__text, .footer__hours {
     text-align: left;
+  }
+  .hidden {
+    display: none;
   }
 }
 @media (min-width: 1400px) {
@@ -648,6 +679,10 @@ body {
     left: 0rem;
     top: 32rem;
   }
+  .light-container .brown-element {
+    right: -11rem;
+    bottom: 37rem;
+  }
   .light-container .bottom-rectangle {
     position: absolute;
     background: url("/src/icons/Rectangle2desktop.png");
@@ -656,7 +691,6 @@ body {
   }
   .light-container .card {
     flex-direction: row;
-    position: relative;
   }
   .light-container .card--reverse {
     flex-direction: row-reverse;
@@ -675,6 +709,7 @@ body {
     margin-top: 8rem;
     z-index: 1;
     margin-left: 9rem;
+    position: relative;
   }
   .light-container .card__text-container {
     flex-grow: 1;
@@ -687,12 +722,15 @@ body {
     position: absolute;
     bottom: -6rem;
   }
+  .light-container .card__element--hide {
+    display: none;
+  }
   .dark-container {
     padding-top: 30rem;
-    position: relative;
     margin-top: -26rem;
   }
   .dark-container .cards {
+    position: relative;
     flex-direction: row;
     align-items: flex-start;
   }
@@ -712,8 +750,8 @@ body {
   }
   .dark-container .cards__element {
     position: absolute;
-    top: 14rem;
-    left: 21.3rem;
+    top: -14rem;
+    left: 4.3rem;
   }
   .dark-container .card__line {
     left: 12.2rem;
@@ -733,27 +771,24 @@ body {
     flex-direction: row;
     margin: 8rem 0;
   }
-  .options-container .brown-second-element {
-    top: -1rem;
-    left: 13.1rem;
-  }
   .options-container .card {
+    position: relative;
     flex-direction: row;
   }
   .options-container .card__image {
-    background: url("/src/homepage/family-gathering-desktop.jpg");
     background-size: cover;
     width: 90rem;
     margin-right: 12.5rem;
     height: 54rem;
     margin-top: 0;
+    position: relative;
   }
   .options-container .card__right-container {
     display: flex;
     flex-direction: column-reverse;
   }
   .options-container .card__button {
-    margin: 3rem 0 5 0;
+    margin: 3rem 0 5rem 0;
   }
   .options-container .card__options {
     flex-direction: column;
@@ -764,9 +799,11 @@ body {
   .options-container .card__options-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
   .options-container .card__description, .options-container .card__title {
     text-align: left;
+    margin-left: 0;
   }
   .options-container .card__option--first::after {
     top: 1.5rem;
@@ -774,9 +811,22 @@ body {
     height: 1px;
     width: 9.5rem;
   }
+  .options-container .brown-second-element {
+    top: -4rem;
+    left: -3.89rem;
+  }
+  .options-container--first .card__image {
+    background: url("/src/homepage/family-gathering-desktop.jpg");
+  }
+  .options-container--second .card__image {
+    background: url("/src/homepage/special-events-desktop.jpg");
+  }
+  .options-container--third .card__image {
+    background: url("/src/homepage/social-events-desktop.jpg");
+  }
   .book {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background: url("/src/booking/hero-bg-desktop.jpg");
   }
   .book__button {
@@ -800,5 +850,8 @@ body {
   .footer__image {
     flex-grow: 1;
     margin-top: -5.5rem;
+  }
+  .hidden {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

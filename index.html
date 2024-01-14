@@ -11,11 +11,12 @@
 
 		<link rel="stylesheet" href="/css/style.css" />
 		<title>Dine Website Challenge</title>
+		
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__image">
-				<!-- <img src="/src/homepage/Bitmap.jpeg" alt="" /> -->
+				
 			</div>
 			<div class="header__text-container padding">
 				<div class="wrapper">
@@ -53,9 +54,11 @@
 						</div>
 					</div>
 					<div class="card card--reverse">
-						<div class="card__image card__image--second"></div>
+						<div class="card__image card__image--second">
+							<div class="brown-element"></div>
+						</div>
 
-						<div class="card__element"><img src="/src/icons/Group 7.svg" alt="" /></div>
+						<div class="card__element card__element--hide"><img src="/src/icons/Group 7.svg" alt="" /></div>
 						<div class="card__text-container">
 							<h3 class="card__title">The most locally sourced food</h3>
 							<p class="card__description">
@@ -65,15 +68,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="brown-element"></div>
+				
 				<div class="bottom-rectangle"></div>
 			</div>
 			<div class="dark-container padding">
 				<div class="wrapper">
 					<div class="cards">
-            <div class="cards__element"><img src="/src/icons/Group 7.svg" alt="" /></div>
+						<div class="cards__element "><img src="/src/icons/Group 7.svg" alt="" /></div>
 						<div class="cards__text-container">
-							
 							<h3 class="cards__title">A few highlights from our menu</h3>
 							<p class="cards__description">
 								We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu
@@ -117,32 +119,90 @@
 					</div>
 				</div>
 			</div>
-			<div class="options-container padding">
-				<div class="wrapper">
-					<div class="card">
-						<div class="brown-second-element"></div>
-						<div class="card__image"></div>
-<div class="card__right-container">
-						<div class="card__options">
-							<p class="card__option card__option--first">Family Gathering</p>
-							<p class="card__option card__option--therest">Special Events</p>
-							<p class="card__option card__option--therest">Social Events</p>
-						</div>
+			
 
-						<div class="card__options-container">
-              <h3 class="card__title">Family Gathering</h3>
-						<p class="card__description">
-							We love catering for entire families. So please bring everyone along for a special meal with your loved
-							ones. We’ll provide a memorable experience for all.
-						</p>
-						<button class="card__button">Book a table</button>
-          </div>
-            </div>
+			<div class="options">
+
+				<div id="tab1Content" class="options-container options-container--first active padding">
+					<div class="wrapper">
+						<div class="card">
+							<div class="card__image"><div class="brown-second-element"></div></div>
+							
+							<div class="card__right-container">
+								<div class="card__options">
+									<button class="card__option card__option--first id="tab1" onClick="JavaScript:selectTab(1);"">Family Gathering</button>
+									<button class="card__option card__option--second id="tab2" onClick="JavaScript:selectTab(2);">Special Events</button>
+									<button class="card__option card__option--third id="tab3" onClick="JavaScript:selectTab(3);">Social Events</button>
+								</div>
+			
+								<div class="card__options-container">
+									<h3 class="card__title">Family Gathering</h3>
+									<p class="card__description">
+										We love catering for entire families. So please bring everyone along for a special meal with your
+										loved ones. We’ll provide a memorable experience for all.
+									</p>
+									<button class="card__button">Book a table</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+			
+				<!--2  -->
+			
+				<!-- <div class="options-container options-container--second hidden padding">
+					<div class="wrapper">
+						<div class="card">
+							<div class="card__image"><div class="brown-second-element"></div></div>
+							
+							<div class="card__right-container">
+								<div class="card__options">
+									<button class="card__option card__option--first">Family Gathering</button>
+									<button class="card__option card__option--second">Special Events</button>
+									<button class="card__option card__option--third">Social Events</button>
+								</div>
+			
+								<div class="card__options-container">
+									<h3 class="card__title">Special Events</h3>
+									<p class="card__description">
+										Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.
+									</p>
+									<button class="card__button">Book a table</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!--  3-->
+				<!-- <div class="options-container options-container--third hidden  padding">
+					<div class="wrapper">
+						<div class="card">
+							<div class="card__image"><div class="brown-second-element"></div></div>
+							
+							<div class="card__right-container">
+								<div class="card__options">
+									<button class="card__option card__option--first">Family Gathering</button>
+									<button class="card__option card__option--second">Special Events</button>
+									<button class="card__option card__option--third">Social Events</button>
+								</div>
+			
+								<div class="card__options-container">
+									<h3 class="card__title">Social Events</h3>
+									<p class="card__description">
+										Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.
+									</p>
+									<button class="card__button">Book a table</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
 			</div>
 
-			<div class="book">
+
+
+
+			<div class="book padding">
 				<h3 class="book__title">Ready to make a reservation?</h3>
 				<button class="book__button">Book a table</button>
 			</div>
@@ -163,9 +223,8 @@
 			</div>
 		</footer>
 
-		<!-- Special Events Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you.
-		We’ll be sure to mark your special date with an unforgettable meal. Social Events Are you looking to have a larger
-		social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a
-		hit with everyone. -->
+		
+		<script src="/js/script.js"></script>
 	</body>
 </html>
+

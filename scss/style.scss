@@ -89,6 +89,11 @@ body {
 		font-size: 1.7rem;
 		text-transform: uppercase;
 		cursor: pointer;
+		transition: background-color 0.1s, color 0.1s;
+		&:hover{
+			background-color: $primary-white;
+			color: $primary-gray;
+		}
 	}
 	&__logo {
 		width: 11.24rem;
@@ -98,7 +103,7 @@ body {
 
 // MAIN
 .light-container {
-	position: relative;
+	// position: relative;
 	top: -10.5rem;
 	margin-bottom: -12rem;
 	.card {
@@ -138,7 +143,7 @@ body {
 		&__description {
 			line-height: 2.6rem;
 			text-align: center;
-			margin-bottom: 9rem;
+			margin-bottom: 6rem;
 		}
 	}
 }
@@ -146,6 +151,7 @@ body {
 .dark-container {
 	background-color: $primary-gray;
 	color: $primary-white;
+	margin-top: 8rem;
 
 	.cards {
 		display: flex;
@@ -223,13 +229,26 @@ body {
 			letter-spacing: 0.25rem;
 			margin-bottom: 1.6rem;
 			text-transform: uppercase;
-
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			padding: 0.8rem 1.5rem;
+			// &--first::after {
+			// 	display: none;
+			// }
+			
 			&--first {
 				color: #4c4c4c;
-				margin-top: 3.5rem;
+				margin-top: 4.5rem;
 			}
-			&--therest {
+			&--second, &--third {
 				opacity: 0.5;
+				transition: color 0.1s;
+				
+			}
+			&:hover{
+				color: rgba(17, 17, 17, 1);
+				opacity:1;
 			}
 		}
 		&__image {
@@ -270,6 +289,11 @@ body {
 			margin: 2.7rem 0 8.5rem 0;
 			text-transform: uppercase;
 			cursor: pointer;
+			transition: background-color 0.1s, color 0.1s;
+			&:hover{
+				background-color: $primary-white;
+				color: $primary-gray;
+			}
 		}
 		&__options-container {
 			display: flex;
@@ -313,6 +337,11 @@ body {
 		margin-top: 2.5rem;
 		text-transform: uppercase;
 		cursor: pointer;
+		transition: background-color 0.1s, color 0.1s;
+		&:hover{
+			background-color: $primary-white;
+			color: $primary-gray;
+		}
 	}
 }
 
@@ -345,6 +374,9 @@ body {
 	&__hours {
 		margin-bottom: 9rem;
 	}
+}
+.hidden{
+	display: none;
 }
 
 @media (min-width: 768px) {
@@ -388,7 +420,7 @@ body {
 			}
 		}
 		&__text-container {
-			top: 35%;
+			top: 40%;
 		}
 		&__description {
 			margin-right: 3.5rem;
@@ -401,44 +433,10 @@ body {
 	.light-container {
 		position: relative;
 		overflow: hidden;
-		.rectangle {
-			position: absolute;
-			top: 23rem;
-			left: -25rem;
-			background: url('/src/icons/Rectangle\ \(1\).png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			z-index: -1;
-			height: 32rem;
-			width: 89.5rem;
-		}
-		.brown-element {
-			position: absolute;
-			background: url('/src/icons/Group\ 12.png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			z-index: 1;
-			width: 16rem;
-			height: 7.6rem;
-			right: 6rem;
-			bottom: 45rem;
-		}
-		.bottom-rectangle {
-			position: absolute;
-			background: url('/src/icons/Rectangle\ \(2\).png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			z-index: -1;
-			width: 89.5rem;
-			height: 32rem;
-			right: -27rem;
-			bottom: -14rem;
-		}
 		.card {
+			position: relative;
 			&__image {
+				// position: relative;
 				&--first {
 					background-image: url('/src/homepage/enjoyable-place-tablet.jpg');
 				}
@@ -461,6 +459,43 @@ body {
 				margin-left: 5.5rem;
 				margin-right: 5.5rem;
 			}
+		}
+
+		.brown-element {
+			position: absolute;
+			background: url('/src/icons/Group\ 12.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: 1;
+			width: 16rem;
+			height: 7.6rem;
+			right: -5rem;
+			bottom: 42rem;
+		}
+		.rectangle {
+			position: absolute;
+			top: 23rem;
+			left: -25rem;
+			background: url('/src/icons/Rectangle\ \(1\).png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: -1;
+			height: 32rem;
+			width: 89.5rem;
+		}
+		.bottom-rectangle {
+			position: absolute;
+			background: url('/src/icons/Rectangle\ \(2\).png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: -1;
+			width: 89.5rem;
+			height: 32rem;
+			right: -27rem;
+			bottom: -14rem;
 		}
 	}
 	.dark-container {
@@ -531,7 +566,6 @@ body {
 		}
 	}
 	.options-container {
-		position: relative;
 		.brown-second-element {
 			position: absolute;
 			background: url('/src/icons/Group\ 12.png');
@@ -541,8 +575,8 @@ body {
 			z-index: 1;
 			width: 16rem;
 			height: 7.6rem;
-			left: 4rem;
-			top: 9rem;
+			left: -5rem;
+			top: -3rem;
 		}
 		.card {
 			&__options {
@@ -550,7 +584,7 @@ body {
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				width: 70rem;
+				
 				margin-top: 6rem;
 				margin-bottom: 3rem;
 			}
@@ -563,7 +597,7 @@ body {
 					content: '';
 					position: absolute;
 					top: 3.5rem;
-					left: 6.5rem;
+					left: 9.5rem;
 					height: 1px;
 					width: 4.8rem;
 					background-color: $primary-beaver;
@@ -571,6 +605,7 @@ body {
 				}
 			}
 			&__image {
+				position: relative;
 				width: 57.3rem;
 				height: 36rem;
 				background: url('/src/homepage/family-gathering-tablet.jpg');
@@ -625,6 +660,9 @@ body {
 		&__hours {
 			text-align: left;
 		}
+	}
+	.hidden{
+		display: none;
 	}
 }
 
@@ -684,8 +722,10 @@ body {
 			left: 0rem;
 			top: 32rem;
 		}
-		// .brown-element {
-		// }
+		.brown-element {
+			right: -11rem;
+			bottom: 37rem;
+		}
 		.bottom-rectangle {
 			position: absolute;
 			background: url('/src/icons/Rectangle2desktop.png');
@@ -695,7 +735,7 @@ body {
 
 		.card {
 			flex-direction: row;
-			position: relative;
+			// position: relative;
 			&--reverse {
 				flex-direction: row-reverse;
 			}
@@ -714,6 +754,7 @@ body {
 					margin-top: 8rem;
 					z-index: 1;
 					margin-left: 9rem;
+					position: relative;
 				}
 			}
 			&__text-container {
@@ -726,15 +767,19 @@ body {
 			}
 			&__element {
 				position: absolute;
-				bottom:-6rem;
+				bottom: -6rem;
+				&--hide {
+					display: none;
+				}
 			}
 		}
 	}
 	.dark-container {
 		padding-top: 30rem;
-		position: relative;
+
 		margin-top: -26rem;
 		.cards {
+			position: relative;
 			flex-direction: row;
 			align-items: flex-start;
 			&__container {
@@ -755,8 +800,8 @@ body {
 			}
 			&__element {
 				position: absolute;
-				top: 14rem;
-				left: 21.3rem;
+				top: -14rem;
+				left: 4.3rem;
 			}
 		}
 		.card {
@@ -780,25 +825,24 @@ body {
 		display: flex;
 		flex-direction: row;
 		margin: 8rem 0;
-		.brown-second-element {
-			top: -1rem;
-			left: 13.1rem;
-		}
+
 		.card {
+			position: relative;
 			&__image {
-				background: url('/src/homepage/family-gathering-desktop.jpg');
+				// background: url('/src/homepage/family-gathering-desktop.jpg');
 				background-size: cover;
 				width: 90rem;
 				margin-right: 12.5rem;
 				height: 54rem;
 				margin-top: 0;
+				position: relative;
 			}
 			&__right-container {
 				display: flex;
 				flex-direction: column-reverse;
 			}
 			&__button {
-				margin: 3rem 0 5 0;
+				margin: 3rem 0 5rem 0;
 			}
 
 			flex-direction: row;
@@ -811,10 +855,12 @@ body {
 			&__options-container {
 				display: flex;
 				flex-direction: column;
+				align-items: flex-start;
 			}
 			&__description,
 			&__title {
 				text-align: left;
+				margin-left: 0;
 			}
 			&__option {
 				&--first::after {
@@ -825,10 +871,35 @@ body {
 				}
 			}
 		}
+		.brown-second-element {
+			top: -4rem;
+			left: -3.89rem;
+		}
+		&--first {
+			.card {
+				&__image {
+					background: url('/src/homepage/family-gathering-desktop.jpg');
+				}
+			}
+		}
+		&--second {
+			.card {
+				&__image {
+					background: url('/src/homepage/special-events-desktop.jpg');
+				}
+			}
+		}
+		&--third {
+			.card {
+				&__image {
+					background: url('/src/homepage/social-events-desktop.jpg');
+				}
+			}
+		}
 	}
 	.book {
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
 		background: url('/src/booking/hero-bg-desktop.jpg');
 
 		&__button {
@@ -855,5 +926,8 @@ body {
 			flex-grow: 1;
 			margin-top: -5.5rem;
 		}
+	}
+	.hidden{
+		display: none;
 	}
 }
