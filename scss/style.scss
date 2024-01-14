@@ -90,7 +90,7 @@ body {
 		text-transform: uppercase;
 		cursor: pointer;
 		transition: background-color 0.1s, color 0.1s;
-		&:hover{
+		&:hover {
 			background-color: $primary-white;
 			color: $primary-gray;
 		}
@@ -103,9 +103,9 @@ body {
 
 // MAIN
 .light-container {
-	// position: relative;
+	position: relative;
 	top: -10.5rem;
-	margin-bottom: -12rem;
+	margin-bottom: -16rem;
 	.card {
 		display: flex;
 		flex-direction: column;
@@ -172,6 +172,7 @@ body {
 			margin-bottom: 8.5rem;
 		}
 	}
+	
 	.card {
 		&__title {
 			font-size: 2rem;
@@ -180,6 +181,7 @@ body {
 			font-weight: 700;
 			margin: 3rem 0 1rem 0;
 		}
+		
 		&__description {
 			text-align: center;
 			margin-bottom: 5.5rem;
@@ -220,6 +222,12 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		&__options {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 		&__option {
 			font-size: 1.7rem;
 			color: rgba(76, 76, 76, 1);
@@ -233,22 +241,19 @@ body {
 			border: none;
 			cursor: pointer;
 			padding: 0.8rem 1.5rem;
-			// &--first::after {
-			// 	display: none;
-			// }
 			
 			&--first {
 				color: #4c4c4c;
 				margin-top: 4.5rem;
 			}
-			&--second, &--third {
+			&--second,
+			&--third {
 				opacity: 0.5;
 				transition: color 0.1s;
-				
 			}
-			&:hover{
+			&:hover {
 				color: rgba(17, 17, 17, 1);
-				opacity:1;
+				opacity: 1;
 			}
 		}
 		&__image {
@@ -290,7 +295,7 @@ body {
 			text-transform: uppercase;
 			cursor: pointer;
 			transition: background-color 0.1s, color 0.1s;
-			&:hover{
+			&:hover {
 				background-color: $primary-white;
 				color: $primary-gray;
 			}
@@ -338,7 +343,7 @@ body {
 		text-transform: uppercase;
 		cursor: pointer;
 		transition: background-color 0.1s, color 0.1s;
-		&:hover{
+		&:hover {
 			background-color: $primary-white;
 			color: $primary-gray;
 		}
@@ -375,7 +380,7 @@ body {
 		margin-bottom: 9rem;
 	}
 }
-.hidden{
+.hidden {
 	display: none;
 }
 
@@ -385,7 +390,7 @@ body {
 		padding-left: 9.7rem;
 	}
 	.header {
-		height: 104rem;
+		height: 115rem;
 		&__logo {
 			width: 10.3rem;
 			margin: 1rem auto;
@@ -410,9 +415,10 @@ body {
 			background-repeat: no-repeat;
 			background-size: cover;
 			width: 100%;
-			height: 45rem;
+			height: auto;
+			min-height: 40rem;
 			position: absolute;
-			top: 0rem;
+			top: 0;
 			left: 0;
 			img {
 				width: 100%;
@@ -433,6 +439,7 @@ body {
 	.light-container {
 		position: relative;
 		overflow: hidden;
+		top: -14.5rem;
 		.card {
 			position: relative;
 			&__image {
@@ -485,21 +492,22 @@ body {
 			height: 32rem;
 			width: 89.5rem;
 		}
+	}
+	.dark-container {
+		padding-bottom: 5rem;
+		position: relative;
 		.bottom-rectangle {
 			position: absolute;
-			background: url('/src/icons/Rectangle\ \(2\).png');
+			background: url('/src/homepage/Rectangle-long.png');
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
 			z-index: -1;
-			width: 89.5rem;
+			width: 76.8rem;
 			height: 32rem;
-			right: -27rem;
-			bottom: -14rem;
+			right: -50%;
+			top: -32rem;
 		}
-	}
-	.dark-container {
-		padding-bottom: 5rem;
 		.cards {
 			&__title {
 				font-size: 4.8rem;
@@ -584,7 +592,7 @@ body {
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				
+
 				margin-top: 6rem;
 				margin-bottom: 3rem;
 			}
@@ -661,7 +669,7 @@ body {
 			text-align: left;
 		}
 	}
-	.hidden{
+	.hidden {
 		display: none;
 	}
 }
@@ -688,7 +696,6 @@ body {
 			height: 4rem;
 			img {
 				width: 100%;
-				height: 100%;
 			}
 		}
 		&__title {
@@ -927,7 +934,7 @@ body {
 			margin-top: -5.5rem;
 		}
 	}
-	.hidden{
+	.hidden {
 		display: none;
 	}
 }
