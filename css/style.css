@@ -100,8 +100,9 @@ body {
 }
 
 .light-container {
+  position: relative;
   top: -10.5rem;
-  margin-bottom: -12rem;
+  margin-bottom: -16rem;
 }
 .light-container .card {
   display: flex;
@@ -206,6 +207,12 @@ body {
 }
 
 .options-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.options-container .card__options {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -363,7 +370,7 @@ body {
     padding-left: 9.7rem;
   }
   .header {
-    height: 104rem;
+    height: 115rem;
   }
   .header__logo {
     width: 10.3rem;
@@ -388,9 +395,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 45rem;
+    height: auto;
+    min-height: 40rem;
     position: absolute;
-    top: 0rem;
+    top: 0;
     left: 0;
   }
   .header__image img {
@@ -409,6 +417,7 @@ body {
   .light-container {
     position: relative;
     overflow: hidden;
+    top: -14.5rem;
   }
   .light-container .card {
     position: relative;
@@ -457,20 +466,21 @@ body {
     height: 32rem;
     width: 89.5rem;
   }
-  .light-container .bottom-rectangle {
+  .dark-container {
+    padding-bottom: 5rem;
+    position: relative;
+  }
+  .dark-container .bottom-rectangle {
     position: absolute;
-    background: url("/src/icons/Rectangle (2).png");
+    background: url("/src/homepage/Rectangle-long.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
-    width: 89.5rem;
+    width: 76.8rem;
     height: 32rem;
-    right: -27rem;
-    bottom: -14rem;
-  }
-  .dark-container {
-    padding-bottom: 5rem;
+    right: -50%;
+    top: -32rem;
   }
   .dark-container .cards__title {
     font-size: 4.8rem;
@@ -649,7 +659,6 @@ body {
   }
   .header__logo img {
     width: 100%;
-    height: 100%;
   }
   .header__title {
     font-size: 8rem;
