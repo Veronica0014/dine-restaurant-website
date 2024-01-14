@@ -43,7 +43,9 @@ div.elem-group.inlined input {
 }
 
 textarea {
-  height: 120px;
+  height: 95px;
+  width: 100%;
+  resize: vertical;
 }
 
 button {
@@ -93,19 +95,22 @@ button:hover {
 .header button {
   margin-top: 2rem;
 }
+.header__text-container {
+  background-color: rgb(17, 17, 17);
+}
 
 .main {
   position: relative;
-  height: 44rem;
+  height: 25rem;
 }
 .main__booking-container {
   position: absolute;
   right: 16.5rem;
-  top: -55rem;
+  top: -66rem;
   background-color: rgb(255, 255, 255);
-  padding: 6rem;
+  padding: 5rem 6rem;
   box-shadow: 0px 20px 30px -6px rgba(0, 0, 0, 0.3);
-  width: 66rem;
+  width: 55rem;
 }
 .main__rectangle-element {
   position: absolute;
@@ -168,6 +173,7 @@ button:hover {
   }
   .header__description {
     margin-bottom: 0;
+    width: 100%;
   }
   .main {
     position: relative;
@@ -211,8 +217,8 @@ button:hover {
     top: 4%;
   }
   .header__description {
-    width: 75%;
     margin: 0 auto;
+    padding: 0 4.2rem;
   }
   .main {
     position: relative;
@@ -220,7 +226,7 @@ button:hover {
     height: 70rem;
   }
   .main__booking-container {
-    width: 65%;
+    width: 81%;
     left: 50%;
     top: 36%;
     transform: translate(-50%, -50%);
