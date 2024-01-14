@@ -3,34 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/booking.css">
   <title>Dine Website</title>
 </head>
 <body>
 
-  Reservations
 
-  We can’t wait to host you. If you have any special requirements please feel free to 
-  call on the phone number below. We’ll be happy to accommodate you.
+  <header class="header">
+    <div class="header__image">
+      
+    </div>
+    <div class="header__text-container padding">
+      <div class="wrapper">
+        <div class="header__logo">
+          <img src="/src/logo.svg" alt="logo" />
+        </div>
+
+        <h1 class="header__title">  Reservations</h1>
+        <p class="header__description">
+          We can’t wait to host you. If you have any special requirements please feel free to 
+          call on the phone number below. We’ll be happy to accommodate you.
+        </p>
+        <a href="" target="_blank">
+					<button class="header__button">Reserve a place</button>
+				</a>
+      </div>
+
+     
+    </div>
+  </header>
 
 
 
-  Name
-  Email
-  Pick a date
-  Pick a time
+<main class="main">
+<div class="main__container">
+  <div class="main__rectangle-element"></div>
+  
+</div>
+<div class="main__booking-container">
+  <div class="main__brown-element"></div>
+  <form action="reservation.php" method="post">
+    <div class="elem-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="visitor_name" placeholder="John Bennet" pattern=[A-Z\sa-z]{3,20} required>
+    </div>
+    <div class="elem-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="visitor_email" placeholder="john.bennet@email.com" required>
+    </div>
+    <div class="elem-group">
+      <label for="phone">Your Phone</label>
+      <input type="tel" id="phone" name="visitor_phone" placeholder="+48 000 000 000" pattern=(\b(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}\b) required>
+    </div>
+   
+   
+   <div class="elements-inlined">
+    <div class="elem-group elem-date inlined">
+      <label for="checkin-date">Pick a date</label>
+      <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <div class="elem-group elem-time inlined">
+      <label for="checkout-date">Pick a time</label>
+      <input type="time" id="checkout-date" name="checkout" required>
+    </div>
+   </div>
+    <div class="elem-group">
+      <!-- <label for="room-selection">Select Room Preference</label> -->
+      <select id="room-selection" name="room_preference" required>
+          <option value="">How many people is the reservation for?</option>
+          <option value="connecting">Just me</option>
+          <option value="connecting">2 people</option>
+          <option value="adjoining">3 people</option>
+          <option value="adjacent">4 people</option>
+      </select>
+    </div>
+   
+    <div class="elem-group">
+      <label for="message">Any additional requirements?</label>
+      <textarea id="message" name="visitor_message" placeholder="I'd like a table by the window" required></textarea>
+    </div>
+    <button type="submit"> Make Reservation</button>
+  </form>
+</div>
+</main>
 
-  Make Reservation
+
+
+  <footer class="footer padding">
+    <div class="footer__image"><img src="/src/logo.svg" alt="logo dine" /></div>
+    <div class="footer__text-container">
+      <div class="footer__text">
+        <p>Marthwaite, Sedbergh</p>
+        <p>Cumbria</p>
+        <p>+00 44 123 4567</p>
+      </div>
+      <div class="footer__hours">
+        <p>Open Times Mon - Fri: 09:00 AM - 10:00</p>
+        <p>PM Sat - Sun: 09:00 AM - 11:30 PM</p>
+      </div>
+    </div>
+  </footer>
 
 
 
-  Marthwaite, Sedbergh
-  Cumbria
-  +00 44 123 4567
 
-  Open Times
-  Mon - Fri: 09:00 AM - 10:00 PM
-  Sat - Sun: 09:00 AM - 11:30 PM
+
 
 </body>
 </html>

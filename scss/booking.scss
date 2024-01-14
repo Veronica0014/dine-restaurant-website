@@ -1,0 +1,244 @@
+@import './colors';
+
+div.elem-group {
+	margin: 20px 0;
+}
+
+div.elem-group.inlined {
+	width: 50%;
+}
+.elements-inlined {
+	display: flex;
+	width: 100%;
+}
+.elem-time {
+	padding-left: 1rem;
+}
+.elem-date {
+	padding-right: 1rem;
+}
+
+label {
+	display: block;
+	font-family: 'Nanum Gothic';
+	padding-bottom: 10px;
+	font-size: 1.6rem;
+}
+
+input,
+select,
+textarea {
+	border-radius: 2px;
+	border: 2px solid #777;
+	box-sizing: border-box;
+	font-size: 1.6rem;
+	font-family: 'League Spartan', sans-serif;
+	width: 100%;
+	padding: 10px;
+}
+
+div.elem-group.inlined input {
+	// width: 95%;
+	display: inline-block;
+}
+
+textarea {
+	height: 120px;
+}
+
+button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	font-size: 1.7rem;
+	font-weight: 600;
+	line-height: 1.6rem;
+
+	letter-spacing: 0.25rem;
+	color: $primary-white;
+	background-color: $primary-gray;
+	padding: 2.5rem 5.5rem;
+	border: 1px solid $primary-white;
+	margin-top: 2.5rem;
+	text-transform: uppercase;
+
+	cursor: pointer;
+	transition: background-color 0.1s, color 0.1s;
+	&:hover {
+		background-color: $primary-white;
+		color: $primary-gray;
+		border: 2px solid $primary-gray;
+	}
+}
+.header {
+	height: 80rem;
+	&__image {
+		position: relative;
+
+		background: url('/src/homepage/booking-bg.png');
+
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: cover;
+	}
+    &__logo{
+        padding-top: 1rem;
+    }
+    &__title{
+        margin: 4rem 0 2rem 0;
+    }
+	a {
+		text-decoration: none;
+	}
+	button {
+		margin-top: 2rem;
+	}
+}
+
+.main {
+	position: relative;
+	height: 44rem;
+
+	&__booking-container {
+		// position: relative;
+		position: absolute;
+		right: 16.5rem;
+		top: -55rem;
+		background-color: $primary-white;
+		padding: 6rem;
+		box-shadow: 0px 20px 30px -6px rgba(0, 0, 0, 0.3);
+		width: 66rem;
+	}
+	&__rectangle-element {
+		position: absolute;
+		background: url('/src/icons/Rectangle-booking.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		right: 30%;
+		z-index: 0;
+	}
+	&__brown-element {
+		position: absolute;
+		bottom: -7rem;
+		left: 0.2rem;
+		transform: translate(-50%, -50%);
+		background: url('/src/icons/Group 12.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 7.6rem;
+		width: 16rem;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 575.98px) {
+	button {
+		font-size: 1.2rem;
+	}
+	input,
+	select,
+	textarea {
+		font-size: 1.3rem;
+	}
+	.header {
+		height: 60rem;
+		&__logo {
+			width: 8.2rem;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			align-items: center;
+			img {
+				width: 100%;
+			}
+           
+		}
+		&__image {
+			background: url('/src/homepage/readymeal-mobile.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			height: 100%;
+		}
+		&__text-container {
+			top: 4%;
+		}
+
+		&__description {
+			margin-bottom: 0;
+		}
+	}
+	.main {
+		position: relative;
+		font-size: 1.5rem;
+		height: 66rem;
+		&__booking-container {
+			width: 90%;
+			left: 50%;
+			top: 36%;
+			transform: translate(-50%, -50%);
+			padding: 3rem;
+		}
+		&__brown-element {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1399.98px) {
+	.header {
+		height: 60rem;
+		&__logo {
+			width: 8.2rem;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			align-items: center;
+			img {
+				width: 100%;
+			}
+           
+		}
+		&__image {
+			background: url('/src/homepage/ready-bg-tablet@2x.jpg');
+
+			background-repeat: no-repeat;
+			background-position: top;
+			background-size: cover;
+			height: 100%;
+		}
+		&__text-container {
+			top: 4%;
+		}
+
+		&__description {
+			
+            width: 75%;
+            margin: 0 auto;
+		}
+	}
+	.main {
+		position: relative;
+		font-size: 1.6rem;
+		height: 70rem;
+		&__booking-container {
+			width: 65%;
+			left: 50%;
+			top: 36%;
+			transform: translate(-50%, -50%);
+			padding: 3rem;
+		}
+		&__brown-element {
+			display: none;
+		}
+	}
+}
